@@ -45,7 +45,9 @@ namespace pandemic {
             /// Fetch ColorInfo object.
             /// \param c City
             /// \return ColorInfo
-            ColorInfo& get_color_info(ColorInfo c);
+            ColorInfo& get_color_info(const ColorInfo &c);
+            ColorInfo& get_color_info(Color c);
+
             friend std::ostream& operator<<(std::ostream& os, const Board& b);
 
     };

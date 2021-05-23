@@ -5,13 +5,15 @@
 #ifndef PANDEMIC_B_COLORINFO_HPP
 #define PANDEMIC_B_COLORINFO_HPP
 #include "Color.hpp"
+#include "string"
 
 namespace pandemic{
     struct ColorInfo {
+        std::string name;
         Color color;
         bool has_cure;
 
-        ColorInfo(Color _c): color(_c), has_cure(false){};
+        ColorInfo(std::string _name, Color _c): name(_name), color(_c), has_cure(false){};
     };
 
 }

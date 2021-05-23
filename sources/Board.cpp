@@ -4,6 +4,7 @@
 
 #include "Board.hpp"
 #include <iostream>
+#include <string>
 using namespace pandemic;
 
 
@@ -17,54 +18,55 @@ Board::Board(){
 
 void Board::load_cities(){
     // Init cities
-    this->cities.insert({Algiers,  CityInfo(Algiers, Black)});
-    this->cities.insert({Atlanta,  CityInfo(Atlanta, Blue)});
-    this->cities.insert({Baghdad,  CityInfo(Baghdad, Black)});
-    this->cities.insert({Bangkok,  CityInfo(Bangkok, Red)});
-    this->cities.insert({Beijing,  CityInfo(Beijing, Red)});
-    this->cities.insert({Bogota,  CityInfo(Bogota, Yellow)});
-    this->cities.insert({BuenosAires,  CityInfo(BuenosAires, Yellow)});
-    this->cities.insert({Cairo,  CityInfo(Cairo, Black)});
-    this->cities.insert({Chennai,  CityInfo(Chennai, Black)});
-    this->cities.insert({Chicago,  CityInfo(Chicago, Blue)});
-    this->cities.insert({Delhi,  CityInfo(Delhi, Black)});
-    this->cities.insert({Essen,  CityInfo(Essen, Blue)});
-    this->cities.insert({HoChiMinhCity,  CityInfo(HoChiMinhCity, Red)});
-    this->cities.insert({HongKong,  CityInfo(HongKong, Red)});
-    this->cities.insert({Istanbul,  CityInfo(Istanbul, Black)});
-    this->cities.insert({Jakarta,  CityInfo(Jakarta, Red)});
-    this->cities.insert({Johannesburg,  CityInfo(Johannesburg, Yellow)});
-    this->cities.insert({Karachi,  CityInfo(Karachi, Black)});
-    this->cities.insert({Khartoum,  CityInfo(Khartoum, Yellow)});
-    this->cities.insert({Kinshasa,  CityInfo(Kinshasa, Yellow)});
-    this->cities.insert({Kolkata,  CityInfo(Kolkata, Black)});
-    this->cities.insert({Lagos,  CityInfo(Lagos, Yellow)});
-    this->cities.insert({Lima,  CityInfo(Lima, Yellow)});
-    this->cities.insert({London,  CityInfo(London, Blue)});
-    this->cities.insert({LosAngeles,  CityInfo(LosAngeles, Yellow)});
-    this->cities.insert({Madrid,  CityInfo(Madrid, Blue)});
-    this->cities.insert({Manila,  CityInfo(Manila, Red)});
-    this->cities.insert({MexicoCity,  CityInfo(MexicoCity, Yellow)});
-    this->cities.insert({Miami,  CityInfo(Miami, Yellow)});
-    this->cities.insert({Milan,  CityInfo(Milan, Blue)});
-    this->cities.insert({Montreal,  CityInfo(Montreal, Blue)});
-    this->cities.insert({Moscow,  CityInfo(Moscow, Black)});
-    this->cities.insert({Mumbai,  CityInfo(Mumbai, Black)});
-    this->cities.insert({NewYork,  CityInfo(NewYork, Blue)});
-    this->cities.insert({Osaka,  CityInfo(Osaka, Red)});
-    this->cities.insert({Paris,  CityInfo(Paris, Blue)});
-    this->cities.insert({Riyadh,  CityInfo(Riyadh, Black)});
-    this->cities.insert({SanFrancisco,  CityInfo(SanFrancisco, Blue)});
-    this->cities.insert({Santiago,  CityInfo(Santiago, Yellow)});
-    this->cities.insert({SaoPaulo,  CityInfo(SaoPaulo, Yellow)});
-    this->cities.insert({Seoul,  CityInfo(Seoul, Red)});
-    this->cities.insert({Shanghai,  CityInfo(Shanghai, Red)});
-    this->cities.insert({StPetersburg,  CityInfo(StPetersburg, Blue)});
-    this->cities.insert({Sydney,  CityInfo(Sydney, Red)});
-    this->cities.insert({Taipei,  CityInfo(Taipei, Red)});
-    this->cities.insert({Tehran,  CityInfo(Tehran, Black)});
-    this->cities.insert({Tokyo,  CityInfo(Tokyo, Red)});
-    this->cities.insert({Washington,  CityInfo(Washington, Blue)});
+    this->cities.insert({Algiers,  CityInfo("Algiers", Algiers, Black)});
+    this->cities.insert({Atlanta,  CityInfo("Atlanta", Atlanta, Blue)});
+    this->cities.insert({Baghdad,  CityInfo("Baghdad", Baghdad, Black)});
+    this->cities.insert({Bangkok,  CityInfo("Bangkok", Bangkok, Red)});
+    this->cities.insert({Beijing,  CityInfo("Beijing", Beijing, Red)});
+    this->cities.insert({Bogota,  CityInfo("Bogota", Bogota, Yellow)});
+    this->cities.insert({BuenosAires,  CityInfo("BuenosAires", BuenosAires, Yellow)});
+    this->cities.insert({Cairo,  CityInfo("Cairo", Cairo, Black)});
+    this->cities.insert({Chennai,  CityInfo("Chennai", Chennai, Black)});
+    this->cities.insert({Chicago,  CityInfo("Chicago", Chicago, Blue)});
+    this->cities.insert({Delhi,  CityInfo("Delhi", Delhi, Black)});
+    this->cities.insert({Essen,  CityInfo("Essen", Essen, Blue)});
+    this->cities.insert({HoChiMinhCity,  CityInfo("HoChiMinhCity", HoChiMinhCity, Red)});
+    this->cities.insert({HongKong,  CityInfo("HongKong", HongKong, Red)});
+    this->cities.insert({Istanbul,  CityInfo("Istanbul", Istanbul, Black)});
+    this->cities.insert({Jakarta,  CityInfo("Jakarta", Jakarta, Red)});
+    this->cities.insert({Johannesburg,  CityInfo("Johannesburg", Johannesburg, Yellow)});
+    this->cities.insert({Karachi,  CityInfo("Karachi", Karachi, Black)});
+    this->cities.insert({Khartoum,  CityInfo("Khartoum", Khartoum, Yellow)});
+    this->cities.insert({Kinshasa,  CityInfo("Kinshasa", Kinshasa, Yellow)});
+    this->cities.insert({Kolkata,  CityInfo("Kolkata", Kolkata, Black)});
+    this->cities.insert({Lagos,  CityInfo("Lagos", Lagos, Yellow)});
+    this->cities.insert({Lima,  CityInfo("Lima", Lima, Yellow)});
+    this->cities.insert({London,  CityInfo("London", London, Blue)});
+    this->cities.insert({LosAngeles,  CityInfo("LosAngeles", LosAngeles, Yellow)});
+    this->cities.insert({Madrid,  CityInfo("Madrid", Madrid, Blue)});
+    this->cities.insert({Manila,  CityInfo("Manila", Manila, Red)});
+    this->cities.insert({MexicoCity,  CityInfo("MexicoCity", MexicoCity, Yellow)});
+    this->cities.insert({Miami,  CityInfo("Miami", Miami, Yellow)});
+    this->cities.insert({Milan,  CityInfo("Milan", Milan, Blue)});
+    this->cities.insert({Montreal,  CityInfo("Montreal", Montreal, Blue)});
+    this->cities.insert({Moscow,  CityInfo("Moscow", Moscow, Black)});
+    this->cities.insert({Mumbai,  CityInfo("Mumbai", Mumbai, Black)});
+    this->cities.insert({NewYork,  CityInfo("NewYork", NewYork, Blue)});
+    this->cities.insert({Osaka,  CityInfo("Osaka", Osaka, Red)});
+    this->cities.insert({Paris,  CityInfo("Paris", Paris, Blue)});
+    this->cities.insert({Riyadh,  CityInfo("Riyadh", Riyadh, Black)});
+    this->cities.insert({SanFrancisco,  CityInfo("SanFrancisco", SanFrancisco, Blue)});
+    this->cities.insert({Santiago,  CityInfo("Santiago", Santiago, Yellow)});
+    this->cities.insert({SaoPaulo,  CityInfo("SaoPaulo", SaoPaulo, Yellow)});
+    this->cities.insert({Seoul,  CityInfo("Seoul", Seoul, Red)});
+    this->cities.insert({Shanghai,  CityInfo("Shanghai", Shanghai, Red)});
+    this->cities.insert({StPetersburg,  CityInfo("StPetersburg", StPetersburg, Blue)});
+    this->cities.insert({Sydney,  CityInfo("Sydney", Sydney, Red)});
+    this->cities.insert({Taipei,  CityInfo("Taipei", Taipei, Red)});
+    this->cities.insert({Tehran,  CityInfo("Tehran", Tehran, Black)});
+    this->cities.insert({Tokyo,  CityInfo("Tokyo", Tokyo, Red)});
+    this->cities.insert({Washington,  CityInfo("Washington", Washington, Blue)});
+
 
 
     // Make links
@@ -258,10 +260,10 @@ void Board::load_cities(){
 }
 
 void Board::load_colors(){
-    this->colors.insert({Yellow, ColorInfo(Yellow)});
-    this->colors.insert({Black, ColorInfo(Black)});
-    this->colors.insert({Red, ColorInfo(Red)});
-    this->colors.insert({Blue, ColorInfo(Blue)});
+    this->colors.insert({Yellow, ColorInfo("Yellow", Yellow)});
+    this->colors.insert({Black, ColorInfo("Black", Black)});
+    this->colors.insert({Red, ColorInfo("Red", Red)});
+    this->colors.insert({Blue, ColorInfo("Blue", Blue)});
 }
 
 int& Board::operator[](City c) {
@@ -295,7 +297,7 @@ CityInfo& Board::get_city_info(City c){
 }
 
 
-ColorInfo& Board::get_color_info(ColorInfo c){
+ColorInfo& Board::get_color_info(const ColorInfo &c){
     std::unordered_map<Color, ColorInfo>::iterator it = this->colors.find(c.color);
 
     if(it == this->colors.end()){
@@ -304,8 +306,23 @@ ColorInfo& Board::get_color_info(ColorInfo c){
 
     return it->second;
 }
+
+ColorInfo& Board::get_color_info(Color c){
+    std::unordered_map<Color, ColorInfo>::iterator it = this->colors.find(c);
+
+    if(it == this->colors.end()){
+        throw std::runtime_error("Color not found.");
+    }
+
+    return it->second;
+}
+
 std::ostream& pandemic::operator<<(std::ostream& os, const pandemic::Board& b)
 {
+    for (const auto& city: b.cities) {
+        const CityInfo &c = city.second;
+        os << "City " << c.name << " " << "Has color " << c.color << " - disease count " << c.disease_count << " - rf " << c.has_research_facility << '\n';
+    }
    return os;
 }
 
